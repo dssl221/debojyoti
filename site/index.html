@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">ChocoHub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#" >Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            
+
+          <button id="navbarCartBtn" class="btn btn-outline-success ms-2" type="button">🛒 Cart</button>
+
+          
+          <!-- Cart Modal -->
+<div id="cartModal" style="display: none; position: absolute; right: 20px; top: 60px; width: 300px; background-color: white; border: 1px solid #ccc; z-index: 1000;">
+  <h3>Your Cart</h3>
+  <table>
+      <thead>
+          <tr>
+              <th>Product name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+          </tr>
+      </thead>
+      <tbody id="cartItems">
+          <!-- Items will be dynamically added here -->
+      </tbody>
+  </table>
+  <p>Total: Rs <span id="cartTotalPrice">0</span></p>
+  <button onclick="closeCartModal()">Close</button>
+</div>
+
+          
+          
+            
+          
+
+        </div>
+    </div>
+</nav>
+
+
+
+
+      <div class="container">
+
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <div class="card">
+                    <div class="card-body">
+                      <img src="https://driftbasket.com/wp-content/uploads/2022/06/bournvil-cranberry.jpg">
+                      <h5 class="card-title">BournVille</h5>
+                      <div class="card-body text-center">
+                        <div class="price-box">
+                          Rs 220
+                      </div>  
+                        
+                    </div>
+                      <p class="card-text">Cadbury Bournville is a premium dark chocolate that delivers an intense, fine, and indulgent experience to lovers of dark chocolate.</p>
+                      
+                    
+                      <div class="card" data-id="1" data-price="220" data-name="BournVille">
+                        <!-- ... other product details ... -->
+                        <div class="quantity-controls">
+                            <button class="btn btn-outline-primary decrease-quantity" type="button">-</button>
+
+                            <span class="quantity">0</span>
+                            <button class="btn btn-outline-primary increase-quantity" type="button">+</button>
+
+                        </div>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                    
+                    
+                    
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <img src="https://www.bigbasket.com/media/uploads/p/l/40179749-6_18-nestle-kitkat-dessert-delight-rich-choco-fudge-chocolate-crispy-wafer.jpg">
+                      <h5 class="card-title">KitKat</h5>
+                      <div class="card-body text-center">
+                        
+                        <div class="price-box">
+                          Rs 320
+                      </div>
+                    </div>
+                      <p class="card-text">Have A Break, Have A KitKat Today With Our Chocolate Wafer Biscuits. Explore Our Classic Products Such As The 2 & 4 Finger Ranges!</p>
+                      
+                      <div class="card" data-id="2" data-price="320" data-name="KitKat">
+                        <!-- ... other product details ... -->
+                        <div class="quantity-controls">
+                          <button class="btn btn-outline-primary decrease-quantity" type="button">-</button>
+
+                          <span class="quantity">0</span>
+                          <button class="btn btn-outline-primary increase-quantity" type="button">+</button>
+
+                      </div>
+                      <button class="add-to-cart-btn">Add To Cart</button>
+                  </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                          <div class="card">
+                            <div class="card-body">
+                              <img src="https://m.media-amazon.com/images/I/61LGkFA0jpL._SL1500_.jpg">
+                      <h5 class="card-title">Bournville Fruit & Nut</h5>
+                      <div class="card-body text-center">
+                        
+                        <div class="price-box">
+                          Rs 250
+                      </div>
+                      
+                    </div>
+                      <p class="card-text">Cadbury Bournville is a premium dark chocolate that delivers an intense, fine, and indulgent experience to lovers of dark chocolate fruit & Nut! </p>
+                      
+                            
+                              <div class="card" data-id="3" data-price="250" data-name="Bournville Fruit & Nut">
+                                <!-- ... other product details ... -->
+                                <div class="quantity-controls">
+                                    <button class="btn btn-outline-primary decrease-quantity" type="button">-</button>
+        
+                                    <span class="quantity">0</span>
+                                    <button class="btn btn-outline-primary increase-quantity" type="button">+</button>
+        
+                                </div>
+                                <button class="add-to-cart-btn">Add To Cart</button>
+                            </div>
+                            
+                            
+                            
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <img src="https://lilgoodness.com/cdn/shop/products/1_9b0bf112-40c8-4f01-8208-8e60d4662c13.jpg?v=1660812767">
+                      <h5 class="card-title">Lil' Goodness</h5>
+                      <div class="card-body text-center">
+                        
+                        <div class="price-box">
+                          Rs 270
+                      </div>
+                    </div>
+                      <p class="card-text">Lil' Goodness Believes Healthy Choices Should Not Compromise On Taste. Nutritious Snacking For Your Kids Where Taste Meets Health</p>
+                       
+                              <div class="card" data-id="4" data-price="270" data-name="Lil' Goodness">
+                                <!-- ... other product details ... -->
+                                <div class="quantity-controls">
+                                  <button class="btn btn-outline-primary decrease-quantity" type="button">-</button>
+        
+                                  <span class="quantity">0</span>
+                                  <button class="btn btn-outline-primary increase-quantity" type="button">+</button>
+        
+                              </div>
+                              <button class="add-to-cart-btn">Add To Cart</button>
+                          </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                
+
+
+
+
+
+      
+                        
+
+             
+      <script src="script.js"></script>
+</body>
+</html>
